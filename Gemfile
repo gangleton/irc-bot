@@ -1,10 +1,9 @@
 source :rubygems
 
 gem "sinatra"
-gem "datamapper"
 
-gem "sqlite3"
-gem "dm-sqlite-adapter"
+gem "pg"
 gem "dm-postgres-adapter"
+gem "datamapper"
 
 gem "isaac"
