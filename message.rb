@@ -7,5 +7,5 @@ class Message
   property :id,      Serial
   property :name,    String
   property :time,    DateTime
-  property :message, Text
+  property :message, String
 end
