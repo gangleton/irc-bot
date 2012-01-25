@@ -6,7 +6,7 @@ require 'isaac'
 require './message.rb'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/logger')
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 configure do |c|
   c.nick = "NOLAbot"
