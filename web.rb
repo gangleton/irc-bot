@@ -7,5 +7,6 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/logger')
 DataMapper.auto_migrate!
 
 get '/' do
-  "Hello logger"
+  messages = Message.all
+  "#{messages.inspect}"
 end
