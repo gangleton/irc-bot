@@ -7,3 +7,5 @@ gem "dm-postgres-adapter"
 gem "datamapper"
 
 gem "isaac"
+
+gem "haml"
