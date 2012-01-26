@@ -20,7 +20,7 @@ on :connect do
 end
 
 on :channel, /.*/ do
-  m = Message.create(:name => nick.to_s, :message => message.to_s, :time => Time.now)
+  m = Message.create(:name => nick.to_s, :message => message, :time => Time.now)
 
   unless m.saved?
     puts "message could not be saved"
