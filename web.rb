@@ -8,7 +8,5 @@ DataMapper.auto_upgrade!
 
 get '/' do
   messages = Message.all
-  messages.each do |m|
-    "#{m.inspect}"
-  end
+  "#{messages.inspect}"
 end
