@@ -25,9 +25,6 @@ on :channel, /.*/ do
   unless m.saved?
     puts "message could not be saved"
   end
-  #open("#{channel}.log", "a") do |log|
-    #log.puts "[#{Time.now.strftime("%c")}] #{nick}: #{message}"
-  #end
 
   puts "#{channel}: #{nick}: #{message}"
 end
