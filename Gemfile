@@ -1,4 +1,4 @@
-source :rubygems
+source "https://rubygems.org"
 
 gem "sinatra"
 
@@ -9,3 +9,4 @@ gem "datamapper"
 gem "isaac"
 
 gem "haml"
+gem "json"

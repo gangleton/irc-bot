@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.2.6)
     bcrypt-ruby (3.0.1)
@@ -77,5 +77,6 @@ DEPENDENCIES
   dm-postgres-adapter
   haml
   isaac
+  json
   pg
   sinatra

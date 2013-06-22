@@ -1,22 +1,18 @@
-#!/usr/bin/env ruby
-
-require 'rubygems'
 require 'isaac'
-
-require './message.rb'
+require './app/message.rb'
 
 DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/logger')
 DataMapper.auto_upgrade!
 
 configure do |c|
-  c.nick = "NOLAbot"
-  c.server = "irc.freenode.net"
-  c.port = 6665
+  c.nick = ENV['IRC_BOT_NICKNAME']
+  c.server = ENV['IRC_SERVER']
+  c.port = ENV['IRC_PORT']
   c.verbose = true
 end
 
 on :connect do
-  join "#cfaNOLA"
+  join ENV['IRC_CHANNEL']
 end
 
 on :channel, /.*/ do
